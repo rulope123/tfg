@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/contacto.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img src="../static/assets/logo.avif" alt="" class="zoomable">
+        </div>
+        <a  href="../view/inicio.ejs" class="zoomable">Inicio</a>
+        <a href="../view/pedir_cita.ejs" class="zoomable">Pedir Cita</a>
+        <a href="../view/contacto.ejs" class="zoomable">Contacto</a>
+        <div class="dropdown">
+            <button class="zoomable">Consulta</button>
+            <div class="dropdown-options">
+              <a href="../view/vacunaciones.ejs">Vacunaciones</a>
+              <a href="../view/marcaje_electrico.ejs">Marcaje electrónico</a>
+              <a href="../view/desparasitaciones.ejs">Desparasitaciones</a>
+              <a href="../view/cirugia.ejs">Cirugías</a>
+            </div>
+          </div>
+</header>
+    <h2>Contacto</h2>
+    <div class="container">
+        <div class="info-contacto">
+            <div class="org-logos">
+                <h3>Correo</h3>
+                <p>veterinariapena@gmail.com</p>
+                <div class="div-logo">
+                    <img src="../static/assets/logo-correo.png" alt=""  class="zoomable">
+                </div>
+                <div class="container-img">
+                    <img src="../static/assets/gatito-contacto.png" alt=""  class="zoomable">
+                </div>
+                <div class="container-img">
+                    <img src="../static/assets/gatitos-contacto.png" alt=""  class="zoomable">
+                </div>
+            </div>
+            <div class="formulario">
+                <h2>Refiere tu caso</h2>
+                <form action="http://localhost:3000/controller/contacto" method="post" id="contactForm">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="especie" name="especie" placeholder="especie">
+                        <label for="especie">especie (gato o perro)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion">
+                        <label for="descripcion">descripcion</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea rows="4" name="mensaje" id="mensaje" class="form-control" placeholder="Introduce aqui el mensaje"></textarea>
+                        <label for="mensaje">Introduce aqui el mensaje</label>
+                        <input type="submit" value="Enviar" id="mensaje" class="btn btn-primary mt-4">
+                    </div>
+                </form>
+            </div>
+            <div class="org-logos">
+                <h3>Teléfono</h3>
+                <p>683 854 685</p>
+                <div class="div-logo">
+                    <img src="../static/assets/logo-telefono.png" alt=""  class="zoomable">
+                </div>
+                <div class="container-img">
+                    <img src="../static/assets/perros-contacto.jpg" alt=""  class="zoomable">
+                </div>
+                <div class="container-img">
+                    <img src="../static/assets/pomeranian-perros.webp" alt=""  class="zoomable">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_padre">
+            <div class="footer">
+                <p>veterinariapena@gmail.com</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/correo.jpeg" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <p>683 854 685</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/logo-telefono.png" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./politica_privacidad.ejs">Política de privacidad</a>
+            </div>
+            <div class="footer">
+                <p>Síguenos en:</p>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/facebook.webp" alt="Facebook">
+                    </div>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/twitter.jpeg" alt="Twitter">
+                    </div>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/logo-insta.webp" alt="Instagram">
+                    </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./contacto.ejs">Contactanos</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../static/js/contacto.js"></script>
+</html>

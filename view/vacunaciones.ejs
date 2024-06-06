@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/vacunaciones.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img src="../static/assets/logo.avif" alt="" class="zoomable">
+        </div>
+        <a href="../view/inicio.ejs" class="zoomable">Inicio</a>
+        <a href="../view/pedir_cita.ejs" class="zoomable">Pedir Cita</a>
+        <a href="../view/contacto.ejs" class="zoomable">Contacto</a>
+        <div class="dropdown">
+            <button class="zoomable">Consulta</button>
+            <div class="dropdown-options">
+                <a href="../view/vacunaciones.ejs">Vacunaciones</a>
+                <a href="../view/marcaje_electrico.ejs">Marcaje electrónico</a>
+                <a href="../view/desparasitaciones.ejs">Desparasitaciones</a>
+                <a href="../view/cirugia.ejs">Cirugías</a>
+            </div>
+        </div>
+    </header>
+    <div class="contenedor">
+        <h2>Vacunaciones</h2>
+        <p>En el Centro Veterinario Peña contamos con un servicio de vacunas para todo tipo de mascotas.</p>
+        <p>Compruebe el calendario de vacunaciones según su tipo de mascota:</p>
+        <div class="contenedor_imagenes_vacunaciones">
+            <div class="enlaces_vacunaciones">
+                <a href="../view/vacunaciones-perros.ejs">
+                    <div>
+                        <div>
+                            <img src="../static/assets/logo-perro-vacunaciones.jpeg" alt="" class="zoomable">
+                        </div>
+                        <h2>CALENDARIO PERROS</h2>
+                    </div>
+                </a>
+                <a href="../view/vacunaciones-gatos.ejs">
+                    <div>
+                        <div>
+                            <img src="../static/assets/logo-gato-vacunaciones.jpeg" alt="" class="zoomable">
+                        </div>
+                        <h2>CALENDARIO GATOS</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_padre">
+            <div class="footer">
+                <p>veterinariapena@gmail.com</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/correo.jpeg" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <p>683 854 685</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/logo-telefono.png" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./politica_privacidad.ejs">Política de privacidad</a>
+            </div>
+            <div class="footer">
+                <p>Síguenos en:</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/facebook.webp" alt="Facebook">
+                </div>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/twitter.jpeg" alt="Twitter">
+                </div>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/logo-insta.webp" alt="Instagram">
+                </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./contacto.ejs">Contactanos</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

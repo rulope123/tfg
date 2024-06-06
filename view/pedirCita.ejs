@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Servicios</title>
+    <link rel="stylesheet" href="../static/css/pedir_cita.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img src="../static/assets/logo.avif" alt="" class="zoomable">
+        </div>
+        <a  href="../view/inicio.ejs" class="zoomable">Inicio</a>
+        <a href="../view/pedir_cita.ejs" class="zoomable">Pedir Cita</a>
+        <a href="../view/contacto.ejs" class="zoomable">Contacto</a>
+        <div class="dropdown">
+            <button class="zoomable">Consulta</button>
+            <div class="dropdown-options">
+              <a href="../view/vacunaciones.ejs">Vacunaciones</a>
+              <a href="../view/marcaje_electrico.ejs">Marcaje electrónico</a>
+              <a href="../view/desparasitaciones.ejs">Desparasitaciones</a>
+              <a href="../view/cirugia.ejs">Cirugías</a>
+            </div>
+          </div>
+</header>
+    <div class="container">
+        <select onchange="mostrarAnimalesDisponibles(this.value)" id="select">
+            <option value="">Seleccione una opción</option>
+            <option value="vacunaciones" id="vacunaciones">Vacunaciones</option>
+            <option value="marcaje_electronico" id="marcaje_electronico">Marcaje Electrónico</option>
+            <option value="desparasitaciones" id="desparasitaciones">Desparasitaciones</option>
+            <option value="cirugia" id="cirugia">Cirugía</option>
+        </select>
+        <div id="especie"></div>
+        <div id="detalles"></div>
+        <div id="cita"></div>
+        <div id="horaCita"></div>
+    </div>
+    <script src="../static/js/pedir_cita.js"></script>
+    <footer>
+        <div class="footer_padre">
+            <div class="footer">
+                <p>veterinariapena@gmail.com</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/correo.jpeg" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <p>683 854 685</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/logo-telefono.png" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./politica_privacidad.ejs">Política de privacidad</a>
+            </div>
+            <div class="footer">
+                <p>Síguenos en:</p>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/facebook.webp" alt="Facebook">
+                    </div>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/twitter.jpeg" alt="Twitter">
+                    </div>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/logo-insta.webp" alt="Instagram">
+                    </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./contacto.ejs">Contactanos</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

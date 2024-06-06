@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/inicio.css">
+    <script src="../static/js/inicio.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img src="../static/assets/logo.avif" alt="" class="zoomable">
+        </div>
+        <a href="#" class="zoomable">Inicio</a>
+        <a href="#urgencias" class="zoomable">Urgencias</a>
+        <a href="#domicilio" class="zoomable">A domicilio</a>
+        <form action="/controller/cita" method="POST" class="zoomable">
+            <input type="hidden" name="usuario" id="usuarioCita">
+            <button type="submit">Pedir Cita</button>
+        </form>        
+        <div class="dropdown">
+            <button class="zoomable">Consulta</button>
+            <div class="dropdown-options">
+                <a href="../view/vacunaciones.ejs">Vacunaciones</a>
+                <a href="../view/marcaje_electrico.ejs">Marcaje electrónico</a>
+                <a href="../view/desparasitaciones.ejs">Desparasitaciones</a>
+                <a href="../view/cirugia.ejs">Cirugías</a>
+            </div>
+        </div>
+        <form action="/controller/contactoUsuario" method="POST" class="zoomable">
+            <input type="hidden" name="usuario" id="usuarioContacto">
+            <button type="submit">Contacto</button>
+        </form> 
+    </header>
+    <div class="blue">
+        <img class="perro zoomable" src="../static/assets/chihuaba.jpg" alt="" width="400px" height="400px">
+        <h2>La salud de los tuyos, en las mejores manos</h2>
+    </div>
+    <div>
+        <h2>Centro veterinario Peña</h2>
+        <div class="contenedor">
+            <div class="tamaño">
+                <div class="texto-descripcion-clinica">
+                    <img src="../static/assets/pata.avif" alt="" width="30px" height="30px" class="zoomable">
+                    <p>TRATAMOS A TUS MASCOTAS CON EL RESPETO Y EL AMOR QUE NECESITAN.</p>
+                </div>
+                <div class="texto-descripcion-clinica">
+                    <img src="../static/assets/pata.avif" alt="" width="30px" height="30px" class="zoomable">
+                    <p>NOS PREOCUPAMOS POR SU BIENESTAR, PONIENDO A SU ALCANCE TODOS NUESTROS CONOCIMIENTOS MÉDICOS.</p>
+                </div>
+                <div class="texto-descripcion-clinica">
+                    <img src="../static/assets/pata.avif" alt="" width="30px" height="30px" class="zoomable">
+                    <P>SOMOS TU CLÍNICA DE CONFIANZA EN COLLADO VILLABA, CON 14 HORAS DE URGENCIA Y ATENCIÓN A
+                        DOMICILIO.</P>
+                </div>
+            </div>
+            <div class="tamaño">
+                <img src="../static/assets/gato.jpg" alt="" class="perro zoomable">
+            </div>
+        </div>
+    </div>
+    <div class="accordion-container">
+        <button class="accordion" id="accordion">Horario: </button>
+    </div>
+    <div class="panel horario">
+        <p>Lunes 09:00 - 14:00, 17:00 - 20:00</p>
+        <p>Martes 09:00 - 14:00, 17:00 - 20:00</p>
+        <p>Miércoles 09:00 - 14:00, 17:00 - 20:00</p>
+        <p>Jueves 09:00 - 14:00, 17:00 - 20:00</p>
+        <p>Viernes 09:00 - 14:00, 17:00 - 20:00</p>
+        <p>Sábado Cerrado</p>
+        <p>Domingo Cerrado</p>
+    </div>
+    <div id="urgencias">
+        <h2>URGENCIAS</h2>
+        <div class="contenedor">
+            <div class="urgencias">
+                <h3>URGENCIAS 18H</h3>
+                <div class="img_urgencia">
+                    <img src="../static/assets/urgencias.jpeg" alt="" class="zoomable">
+                </div>
+                <p>El Centro veterinario Peña ofrece un servicio de urgencias 16h (08:00-00:00), 365 días al año.</p>
+            </div>
+            <div class="urgencias">
+                <h3>683 854 685</h3>
+                <div class="img_urgencia">
+                    <img src="../static/assets/icono-telefono.png" alt="" class="zoomable">
+                </div>
+                <p>Móvil de urgencias. Se atenderán sólo las llamadas telefónicas.</p>
+            </div>
+        </div>
+    </div>
+    <div id="domicilio">
+        <h2>VISITAS A DOMICILIO</h2>
+        <h3>El centro veterinario Peña posee a tu disposición un servicio de visitas a domicilio.</h3>
+        <div class="contenedor_domicilio">
+            <div class="domicilio">
+                <p>MENOR ESTRÉS PARA TU MASCOTA</p>
+                <div class="img_domicilio">
+                    <img src="../static/assets/pata-perro.png" alt="" class="zoomable">
+                </div>
+            </div>
+            <div class="domicilio">
+                <p>MAYOR COMODIDAD PARA TI</p>
+                <div class="img_domicilio">
+                    <img src="../static/assets/comodidad.png" alt="" class="zoomable">
+                </div>
+            </div>
+        </div>
+        <div class="img_casa casa">
+            <img src="../static/assets/casa.jpg" alt="" class="zoomable">
+        </div>
+        <div class="contenedor_domicilio">
+            <div class="domicilio">
+                <p>DESPUÉS DE HORARIO DE CONSULTA</p>
+                <div class="img_domicilio">
+                    <img src="../static/assets/consulta.jpg" alt="" class="zoomable">
+                </div>
+            </div>
+            <div class="domicilio">
+                <p>DESPLAZAMIENTO POR LA SIERRA DE MADRID</p>
+                <div class="img_domicilio">
+                    <img src="../static/assets/madrid.jpeg" alt="" class="zoomable">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_padre">
+            <div class="footer">
+                <p>veterinariapena@gmail.com</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/correo.jpeg" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <p>683 854 685</p>
+                <div class="footer-img zoomable">
+                    <img src="../static/assets/logo-telefono.png" alt="">
+                </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./politica_privacidad.ejs">Política de privacidad</a>
+            </div>
+            <div class="footer">
+                <p>Síguenos en:</p>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/facebook.webp" alt="Facebook">
+                    </div>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/twitter.jpeg" alt="Twitter">
+                    </div>
+                    <div class="footer-img zoomable">
+                        <img src="../static/assets/logo-insta.webp" alt="Instagram">
+                    </div>
+            </div>
+            <div class="footer">
+                <a class="zoomable" href="./contacto.ejs">Contactanos</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var usuario = typeof usuario !== "undefined" ? usuario : '';
+    if (usuario !== '') {
+        localStorage.setItem('usuario', usuario);
+    }
+</script>
+
+</html>
