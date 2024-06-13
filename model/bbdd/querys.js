@@ -20,7 +20,8 @@ export class loginModel{
 
     static async getUser({data}){
         try {
-            const results = await connection.query('SELECT * FROM usuarios WHERE usuario = ? AND contrasena = ?',[data.usuario,data.contrasena]);
+            const results = await connection.query('SELECT * FROM usuarios WHERE usuario = ? AND contrasena = ?',
+                [data.usuario,data.contrasena]);
             if (results.length === 0) return false;
             return true;
         } catch (error) {
@@ -42,7 +43,8 @@ export class loginModel{
 
     static async insertUser({data}){
         try {
-            const results = await connection.execute('INSERT INTO usuarios (usuario,contrasena,email) VALUES (?,?,?)',[data.nuevoUsu,data.nuevaContra,data.nuevoCorreo]);
+            const results = await connection.execute('INSERT INTO usuarios (usuario,contrasena,email) VALUES (?,?,?)',
+                [data.nuevoUsu,data.nuevaContra,data.nuevoCorreo]);
             console.log('Usuario insertado correctamente',results);
             if ( results.length === 0 ) return false;
             return true;
@@ -53,7 +55,8 @@ export class loginModel{
 
     static async cambiarContrasena({data}){
         try {
-            const [results] = await connection.query('SELECT * FROM usuarios WHERE usuario = ? AND contrasena = ?',[data.usu,data.nuevaContrasena]);
+            const [results] = await connection.query('SELECT * FROM usuarios WHERE usuario = ? AND contrasena = ?',
+                [data.usu,data.nuevaContrasena]);
             if( results.length === 0){
                 try {
                     const [datosUsuario] = await connection.query('SELECT * FROM usuarios WHERE usuario = ?',[data.usu]);
@@ -72,7 +75,8 @@ export class loginModel{
                           });
                           const code = generateCode();
                           try {
-                            const codigo = await connection.query('UPDATE usuarios SET codigo = ? WHERE usuario = ?',[code,datosUsuario[0].usuario]);
+                            const codigo = await connection.query('UPDATE usuarios SET codigo = ? WHERE usuario = ?',
+                                [code,datosUsuario[0].usuario]);
                             console.log(codigo);
                             if(codigo.affectedRows === 0){
                                   console.log('No se ha podido crear el codigo');
@@ -101,7 +105,8 @@ export class loginModel{
 
     static async codigoContrasena({data}){
         try {
-            const results = await connection.query('SELECT * FROM usuarios WHERE usuario = ? AND codigo = ?',[data.usu,data.codigo]);
+            const results = await connection.query('SELECT * FROM usuarios WHERE usuario = ? AND codigo = ?',
+                [data.usu,data.codigo]);
             if(results.length === 0){
                 return false;
             }
@@ -113,9 +118,11 @@ export class loginModel{
 
     static async nuevaContra({data}){
         try {
-            const results = await connection.query('UPDATE usuarios SET contrasena = ? WHERE usuario = ?',[data.nuevaContra,data.usu]);
+            const results = await connection.query('UPDATE usuarios SET contrasena = ? WHERE usuario = ?',
+                [data.nuevaContra,data.usu]);
             console.log(results);
-            const eliminarCodigo = await connection.query("UPDATE usuarios SET codigo = null WHERE usuario = ?",[data.usu]);
+            const eliminarCodigo = await connection.query("UPDATE usuarios SET codigo = null WHERE usuario = ?",
+                [data.usu]);
             if(results.affectedRows == 0){
                 return false;
             }
@@ -128,7 +135,8 @@ export class loginModel{
     static async insertarAnimal({data}){
         try{
             console.log(data);
-            const results = await connection.query('INSERT INTO cita (id_usuario,tipocita_fk,lugarcita_fk,raza,enfermedad,fecha) values (?,?,?,?,?,?)',[data.usu,data.cita,data.lugarCita,data.animal,data.enfermedad,data.fecha]);
+            const results = await connection.query('INSERT INTO cita (id_usuario,tipocita_fk,lugarcita_fk,raza,enfermedad,fecha) values (?,?,?,?,?,?)'
+                ,[data.usu,data.cita,data.lugarCita,data.animal,data.enfermedad,data.fecha]);
             console.log(results);
             return results.affectedRows == 0 ?  false: true;
         }catch(error){
@@ -138,7 +146,8 @@ export class loginModel{
 
     static async insertarContacto({data}){
         try {
-            const results = await connection.query('INSERT INTO contacto (id_usuario_fk,especie,descripcion,mensaje) VALUES (?,?,?,?)',[data.usuario,data.especie,data.descripcion,data.mensaje]);
+            const results = await connection.query('INSERT INTO contacto (id_usuario_fk,especie,descripcion,mensaje) VALUES (?,?,?,?)',
+                [data.usuario,data.especie,data.descripcion,data.mensaje]);
             console.log(results);
             return results.affectedRows == 0 ?  false: true;
         } catch (error) {
